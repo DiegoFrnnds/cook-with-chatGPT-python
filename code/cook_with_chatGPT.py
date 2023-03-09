@@ -1,7 +1,7 @@
 # needs PyGithub
 from github import Github
 
-token = "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"
+token = "my-token" # replace by actual token
 g = Github(token)
 
 repo = g.get_repo("DiegoFrnnds/cook-with-chatGPT-python")
@@ -22,4 +22,3 @@ for i in range(num_commits):
       repo.update_file(contents.path, message, message, contents.sha)
     except:
       repo.create_file("empty_file", message, "")
-
